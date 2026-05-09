@@ -1,0 +1,109 @@
+* {
+   box-sizing: border-box;
+}
+
+body {
+   margin: 0;
+   padding: 20px;
+   display: flex;
+   flex-direction: column; /* Stack button and cards */
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background-color: #f0f2f5;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   transition: background-color 0.3s, color 0.3s;
+}
+
+/* --- Dark Mode Styles --- */
+body.dark-mode {
+   background-color: #121212;
+   color: #ffffff;
+}
+
+body.dark-mode .card {
+   background-color: #1e1e1e;
+   border-color: #444;
+   color: #ffffff;
+}
+
+body.dark-mode .footer {
+   background-color: #2a2a2a;
+   border-top: 1px solid #444;
+}
+
+/* Toggle Button Styling */
+.theme-btn {
+   margin-bottom: 20px;
+   padding: 10px 20px;
+   cursor: pointer;
+   border-radius: 20px;
+   border: none;
+   background-color: #003580;
+   color: white;
+   font-weight: bold;
+}
+
+/* --- Rest of your original CSS --- */
+.content-wrapper {
+   display: flex;
+   flex-direction: row;
+   gap: 30px;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+.card {
+   width: 380px;
+   background: rgb(208, 216, 203);
+   border-radius: 15px;
+   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+   overflow: hidden;
+   transition: transform 0.3s;
+   border: 2px solid #333;
+   display: flex;
+   flex-direction: column;
+}
+
+.card:hover { transform: translateY(-10px); }
+
+.header {
+   background-color: #003580;
+   height: 80px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #ffd700;
+   font-weight: bold;
+   font-size: 1.5rem;
+}
+
+.profile-img {
+   max-width: 100%;
+   height: auto;
+   border-radius: 8px;
+   margin-bottom: 15px;
+}
+
+.info { padding: 20px; text-align: center; }
+
+.title {
+   color: #003580;
+   font-weight: 600;
+   margin-bottom: 20px;
+}
+
+.footer {
+   display: flex;
+   justify-content: space-around;
+   padding: 15px;
+   background: #f9f9f9;
+   border-top: 1px solid #eee;
+}
+
+.footer a {
+   text-decoration: none;
+   color: #00804f;
+   font-weight: bold;
+   font-size: 0.85rem;
+}
